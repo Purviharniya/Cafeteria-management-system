@@ -1,4 +1,4 @@
-<h1>MENU:<h1>
+<h1>MENU:</h1>
 
 <ol>
 <li> Hot Beverages:
