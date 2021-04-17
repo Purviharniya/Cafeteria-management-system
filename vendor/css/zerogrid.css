@@ -26,7 +26,7 @@ Author URI: http://www.zerotheme.com/
 .item-container img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 250px;
 	-webkit-transition: all .5s ease; /* Safari and Chrome */
     -moz-transition: all .5s ease; /* Firefox */
     -ms-transition: all .5s ease; /* IE 9 */
