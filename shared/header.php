@@ -73,6 +73,8 @@
                                 <ul class="nav navbar-nav">
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="food.php">Our Food</a></li>
+                                    <li><a href="menu.php">Menu</a></li>
+                                    <li><a href="blog.php">Blog</a></li>
                                     <li><a href="about.php">About Us</a></li>
                                     <li><a href="faq.php">FAQ</a></li>
                                     <li><a href="./user/register.php">Order Now</a></li>
