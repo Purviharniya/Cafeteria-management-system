@@ -1,0 +1,36 @@
+.register-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url(../../images/home.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-div {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  border: none;
+  overflow: hidden;
+  padding: 20px;
+  min-width: 40vw;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.reg-head {
+  font-weight: bold !important;
+  font-size: 2rem !important;
+}

@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "cms";
-$con = mysqli_connect($servername, $server_user, $server_pass, $dbname);
+$con = mysqli_connect($servername, $username, $password, $dbname);
 
 if (mysqli_connect_errno()) {
     echo "Could not connect to the database:" . mysqli_connect_errno();
