@@ -1,24 +1,25 @@
 <?php
 include '../config.php';
-include 'includes/wallet.php';
 
-if ($_SESSION['customer_sid'] == session_id()) {
-    $name = $_SESSION['name'];
+if ($_SESSION['admin_sid'] == session_id()) {$name = $_SESSION['name'];
     $role = $_SESSION['role'];
-    $user_id = $_SESSION['user_id'];
-    $result = mysqli_query($con, "SELECT * FROM users where id = $user_id");
-    while ($row = mysqli_fetch_array($result)) {
-        $name = $row['name'];
-        $address = $row['address'];
-        $contact = $row['contact'];
-        $verified = $row['verified'];
-    }
-} elseif ($_SESSION['admin_sid'] == session_id()) {
-    $name = $_SESSION['name'];
-    $role = $_SESSION['role'];
-    header("location:admin-page.php");
+    // header("location:admin-page.php");
 } else {
-    header("location:login.php");
+    if ($_SESSION['customer_sid'] == session_id()) {
+        $name = $_SESSION['name'];
+        $role = $_SESSION['role'];
+        $user_id = $_SESSION['user_id'];
+        $result = mysqli_query($con, "SELECT * FROM users where id = $user_id");
+        while ($row = mysqli_fetch_array($result)) {
+            $name = $row['name'];
+            $address = $row['address'];
+            $contact = $row['contact'];
+            $verified = $row['verified'];
+        }
+        header("location:index.php");
+    } else {
+        header("location:login.php");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -34,12 +35,12 @@ if ($_SESSION['customer_sid'] == session_id()) {
     <!-- Favicons-->
     <link rel="shortcut icon" href="../vendor/images/logo.jpg">
 
-
     <!-- CORE CSS-->
     <link href="vendor/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="vendor/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!-- Custome CSS-->
     <link href="vendor/css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="vendor/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet"
         media="screen,projection">
@@ -101,9 +102,6 @@ if ($_SESSION['customer_sid'] == session_id()) {
         <div class="loader-section section-right"></div>
     </div>
     <!-- End Page Loading -->
-
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
-
     <!-- START HEADER -->
     <header id="header" class="page-topbar">
         <!-- start header nav-->
@@ -117,19 +115,12 @@ if ($_SESSION['customer_sid'] == session_id()) {
                                     class="logo-text">Logo</span></h1>
                         </li>
                     </ul>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="#" class="waves-effect waves-block waves-light"
-                                style="font=-weight:700;font-size:1.5rem;">Rs. <?php echo $balance; ?></i></a>
-                        </li>
-                    </ul>
                 </div>
             </nav>
         </div>
         <!-- end header nav-->
     </header>
     <!-- END HEADER -->
-
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
     <!-- START MAIN -->
     <div id="main">
@@ -160,7 +151,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
                         </div>
                     </li>
                     <li class="bold active"><a href="index.php" class="waves-effect waves-cyan"><i
-                                class="mdi-editor-border-color"></i> Order Food</a>
+                                class="mdi-editor-border-color"></i> Food Menu</a>
                     </li>
                     <li class="no-padding">
                         <ul class="collapsible collapsible-accordion">
@@ -168,12 +159,12 @@ if ($_SESSION['customer_sid'] == session_id()) {
                                         class="mdi-editor-insert-invitation"></i> Orders</a>
                                 <div class="collapsible-body">
                                     <ul>
-                                        <li><a href="orders.php">All Orders</a>
+                                        <li><a href="all-orders.php">All Orders</a>
                                         </li>
                                         <?php
-$sql = mysqli_query($con, "SELECT DISTINCT status FROM orders WHERE customer_id = $user_id;");
+$sql = mysqli_query($con, "SELECT DISTINCT status FROM orders;");
 while ($row = mysqli_fetch_array($sql)) {
-    echo '<li><a href="orders.php?status=' . $row['status'] . '">' . $row['status'] . '</a>
+    echo '<li><a href="all-orders.php?status=' . $row['status'] . '">' . $row['status'] . '</a>
                                     </li>';
 }
 ?>
@@ -188,12 +179,12 @@ while ($row = mysqli_fetch_array($sql)) {
                                         class="mdi-action-question-answer"></i> Feedbacks</a>
                                 <div class="collapsible-body">
                                     <ul>
-                                        <li><a href="feedbacks.php">All Feedbacks</a>
+                                        <li><a href="all-tickets.php">All Feedbacks</a>
                                         </li>
                                         <?php
-$sql = mysqli_query($con, "SELECT DISTINCT status FROM tickets WHERE poster_id = $user_id AND not deleted;");
+$sql = mysqli_query($con, "SELECT DISTINCT status FROM tickets;");
 while ($row = mysqli_fetch_array($sql)) {
-    echo '<li><a href="feedbacks.php?status=' . $row['status'] . '">' . $row['status'] . '</a>
+    echo '<li><a href="all-tickets.php?status=' . $row['status'] . '">' . $row['status'] . '</a>
                                     </li>';
 }
 ?>
@@ -202,8 +193,8 @@ while ($row = mysqli_fetch_array($sql)) {
                             </li>
                         </ul>
                     </li>
-                    <li class="bold"><a href="details.php" class="waves-effect waves-cyan"><i
-                                class="mdi-social-person"></i> Edit Details</a>
+                    <li class="bold"><a href="users.php" class="waves-effect waves-cyan"><i
+                                class="mdi-social-person"></i> Users</a>
                     </li>
                 </ul>
                 <a href="#" data-activates="slide-out"

@@ -1,14 +1,24 @@
+.admin-menu-img {
+  height: 150px;
+  width: 150px;
+}
+
 .alert {
   border-radius: 5px;
   padding: 10px;
   color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .alert-danger {
   background-color: #e99691;
   border: 1px solid #950e04;
+}
+
+.alert-success {
+  color: #000 !important;
+  background-color: #c9fad9;
+  border: 1px solid #1e7c4a;
 }
 
 .closebtn {
