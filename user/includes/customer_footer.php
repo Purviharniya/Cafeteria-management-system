@@ -2,7 +2,7 @@
 <!-- END MAIN -->
 
 <!-- START FOOTER -->
-<footer class="page-footer">
+<footer class="page-footer deep-purple darken-4">
     <div class="footer-copyright">
         <div class="container">
             <span>Copyright © 2021 || All rights reserved.</span>

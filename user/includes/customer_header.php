@@ -32,7 +32,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
     <title>CMS</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="../vendor/images/logo.jpg">
+    <link rel="shortcut icon" href="../vendor/images/logo1.png">
 
 
     <!-- CORE CSS-->
@@ -108,12 +108,12 @@ if ($_SESSION['customer_sid'] == session_id()) {
     <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
-            <nav class="navbar-color">
+            <nav class="navbar-color deep-purple darken-4" >
                 <div class="nav-wrapper">
                     <ul class="left">
                         <li>
                             <h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img
-                                        src="../vendor/images/logo.jpg" height="40" alt="logo"></a> <span
+                                        src="../vendor/images/logo1.png" height="48" alt="logo"></a> <span
                                     class="logo-text">Logo</span></h1>
                         </li>
                     </ul>
@@ -139,7 +139,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
             <!-- START LEFT SIDEBAR NAV-->
             <aside id="left-sidebar-nav">
                 <ul id="slide-out" class="side-nav fixed leftside-navigation">
-                    <li class="user-details cyan darken-2">
+                    <li class="user-details deep-purple darken-1">
                         <div class="row">
                             <div class="col col s4 m4 l4">
                                 <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
@@ -159,12 +159,12 @@ if ($_SESSION['customer_sid'] == session_id()) {
                             </div>
                         </div>
                     </li>
-                    <li class="bold active"><a href="index.php" class="waves-effect waves-cyan"><i
-                                class="mdi-editor-border-color"></i> Order Food</a>
+                    <li class="bold active "><a href="index.php" class="waves-effect waves-cyan" style="color:#311b92;"><i
+                                class="mdi-editor-border-color" ></i> Order Food</a>
                     </li>
                     <li class="no-padding">
                         <ul class="collapsible collapsible-accordion">
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan" style="color:#311b92;"><i
                                         class="mdi-editor-insert-invitation"></i> Orders</a>
                                 <div class="collapsible-body">
                                     <ul>
@@ -184,7 +184,7 @@ while ($row = mysqli_fetch_array($sql)) {
                     </li>
                     <li class="no-padding">
                         <ul class="collapsible collapsible-accordion">
-                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i
+                            <li class="bold"><a class="collapsible-header waves-effect waves-cyan" style="color:#311b92;"><i
                                         class="mdi-action-question-answer"></i> Feedbacks</a>
                                 <div class="collapsible-body">
                                     <ul>
@@ -202,7 +202,7 @@ while ($row = mysqli_fetch_array($sql)) {
                             </li>
                         </ul>
                     </li>
-                    <li class="bold"><a href="details.php" class="waves-effect waves-cyan"><i
+                    <li class="bold"><a href="details.php" class="waves-effect waves-cyan" style="color:#311b92;"><i
                                 class="mdi-social-person"></i> Edit Details</a>
                     </li>
                 </ul>

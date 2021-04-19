@@ -39,8 +39,8 @@ echo '              <div class="row">
                     <ul id="issues-collection" class="collection">';
 while ($row = mysqli_fetch_array($sql)) {
     $status = $row['status'];
-    echo '<li class="collection-item avatar">
-                              <i class="mdi-content-content-paste red circle"></i>
+    echo '<li class="collection-item avatar  ">
+                              <i class="mdi-content-content-paste deep-purple darken-4 circle"></i>
                               <span class="collection-header">Order No. ' . $row['id'] . '</span>
                               <p><strong>Date:</strong> ' . $row['date'] . '</p>
                               <p><strong>Payment Type:</strong> ' . $row['payment_type'] . '</p>
@@ -89,7 +89,7 @@ while ($row = mysqli_fetch_array($sql)) {
 										<input type="hidden" value="' . $id . '" name="id">
 										<input type="hidden" value="Cancelled by Customer" name="status">
 										<input type="hidden" value="' . $row['payment_type'] . '" name="payment_type">
-										<button class="btn waves-effect waves-light right submit" type="submit" name="action">Cancel Order
+										<button class="btn waves-effect waves-light right submit deep-purple darken-4" type="submit" name="action">Cancel Order
                                               <i class="mdi-content-clear right"></i>
 										</button>
 										</form>';

@@ -63,7 +63,7 @@ include "includes/customer_header.php";
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input type="hidden" value="<?php echo $user_id; ?>" name="id">
-                                        <button class="btn cyan waves-effect waves-light right" type="submit"
+                                        <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit"
                                             name="action">Submit
                                             <i class="mdi-content-send right"></i>
                                         </button>

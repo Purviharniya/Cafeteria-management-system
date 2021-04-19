@@ -63,7 +63,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
                 <div>
                     <div class="input-field col s12">
-                        <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Order
+                        <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" name="action">Order
                             <i class="mdi-content-send right"></i>
                         </button>
                     </div>
