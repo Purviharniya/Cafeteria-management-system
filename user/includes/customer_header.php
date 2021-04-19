@@ -146,7 +146,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
                             </div>
                             <div class="col col s8 m8 l8">
                                 <ul id="profile-dropdown" class="dropdown-content">
-                                    <li><a href="routers/logout.php"><i class="mdi-hardware-keyboard-tab"></i>
+                                    <li><a href="handlers/logout.php"><i class="mdi-hardware-keyboard-tab"></i>
                                             Logout</a>
                                     </li>
                                 </ul>
