@@ -1,5 +1,6 @@
 <?php
 include '../../config.php';
+include '../includes/wallet.php';
 $subject = htmlspecialchars($_POST['subject']);
 $description = htmlspecialchars($_POST['description']);
 $type = $_POST['type'];
