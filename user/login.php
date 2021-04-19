@@ -9,7 +9,7 @@ include "includes/header.php";
                 Login
             </div>
             <div class="card-content">
-                <form method="post" action="routers/router.php" class="login-form col s12" id="form">
+                <form method="post" action="handlers/router.php" class="login-form col s12" id="form">
                     <div class="row margin">
                         <div class="input-field col s12">
                             <i class="mdi-social-person-outline prefix"></i>

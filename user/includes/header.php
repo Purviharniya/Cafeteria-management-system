@@ -1,14 +1,12 @@
-<?php 
-include("../config.php");
+<?php
+include "../config.php";
 ?>
 
-<?php  
-if(isset($_SESSION['admin_sid']))
-{
-	header("location:admin_index.php");
-}
-elseif(isset($_SESSION['customer_sid'])){
-    header("location:customer_index.php");
+<?php
+if (isset($_SESSION['admin_sid'])) {
+    header("location:admin-page.php");
+} elseif (isset($_SESSION['customer_sid'])) {
+    header("location:index.php");
 }
 ?>
 

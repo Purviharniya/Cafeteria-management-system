@@ -1,3 +1,31 @@
+.alert {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+  background-color: #e99691;
+  border: 1px solid #950e04;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
 body {
   background-color: #f9f9f9;
 }
@@ -290,7 +318,12 @@ header .brand-logo {
   padding: 14px 20px;
 }
 header .brand-logo img {
-  width: 172px;
+  width: 72px;
+}
+
+.menu-img img {
+  height: 100px;
+  width: 100px;
 }
 @media only screen and (max-width: 992px) {
   nav .nav-wrapper {

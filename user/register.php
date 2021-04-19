@@ -9,7 +9,7 @@ include "includes/header.php";
                 Register
             </div>
             <div class="card-content">
-                <form class="formValidate" id="formValidate" method="post" action="routers/register-router.php"
+                <form class="formValidate" id="formValidate" method="post" action="handlers/register-router.php"
                     novalidate="novalidate" class="col s12">
                     <div class="row margin">
                         <div class="input-field col s12">
