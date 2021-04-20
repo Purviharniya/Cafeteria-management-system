@@ -45,18 +45,18 @@ if ($continue) {
         <div class="section">
             <?php
 echo '<ul id="task-card" class="collection with-header">
-									<div id="card-alert" class="card cyan">
+									<div id="card-alert" class="card deep-purple darken-4">
 										<div class="card-content white-text">
 										<span class="card-title white-text darken-1">Ticket No. ' . $ticket_id . '</span>
 										<p><strong>Subject: </strong>' . $subject . '</p>
 										<p><strong>Status: </strong>' . $status . '</p>
 										<p><strong>Type: </strong>' . $type . '</p>
 										</div>
-										<div class="card-action cyan">
+										<div class="card-action deep-purple darken-4">
 										<form method="post" action="routers/ticket-status.php">
 										<input type="hidden" name="ticket_id" value="' . $ticket_id . '">
 										<input type="hidden" name="status" value="' . ($status != 'Closed' ? 'Closed' : 'Open') . '">
-										<button class="waves-effect waves-light deep-orange btn white-text" type="submit" name="action">'
+										<button class="waves-effect waves-light deep-purple darken-1 btn white-text" type="submit" name="action">'
         . ($status != 'Closed' ? 'Close<i class="mdi-navigation-close"></i>' : 'Reopen<i class="mdi-navigation-check"></i>') . '
 										</button>
 										</form>
@@ -73,8 +73,8 @@ echo '<ul id="task-card" class="collection with-header">
             $role1 = $row2['role'];
         }
         echo '
-								  <li class="collection-item avatar">
-									  <i class="' . ($role1 == 'Administrator' ? 'mdi-action-star-rate' : 'mdi-social-person') . ' cyan circle"></i>
+								  <li class="collection-item  avatar">
+									  <i class="' . ($role1 == 'Administrator' ? 'mdi-action-star-rate' : 'mdi-social-person') . ' deep-purple darken-1 circle"></i>
 									  <span class="collection-header"> ' . $name . '</span>
 									  <p><strong>Date:</strong> ' . $row1['date'] . '</p>
 									  <p><strong>Role:</strong> ' . $role1 . '</p>
@@ -104,7 +104,7 @@ echo '<ul id="task-card" class="collection with-header">
                         </div>
                         <div class="row">
                           <div class="input-field col s12">
-                            <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Reply
+                            <button class="btn waves-effect waves-light right deep-purple darken-1" type="submit" name="action">Reply
                               <i class="mdi-content-send right"></i>
                             </button>
                           </div>

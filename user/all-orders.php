@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_array($sql)) {
 							  <p><strong>Status:</strong> ' . ($deleted ? $status : '
 							  <form method="post" action="handlers/edit-orders.php">
 							    <input type="hidden" value="' . $row['id'] . '" name="id">
-								<select name="status">
+								<select name="status" style="color:#311b92;">
 								<option value="Yet to be delivered" ' . ($status == 'Yet to be delivered' ? 'selected' : '') . '>Yet to be delivered</option>
 								<option value="Delivered" ' . ($status == 'Delivered' ? 'selected' : '') . '>Delivered</option>
 								<option value="Cancelled by Admin" ' . ($status == 'Cancelled by Admin' ? 'selected' : '') . '>Cancelled by Admin</option>
