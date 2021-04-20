@@ -16,7 +16,8 @@ if (isset($_POST['action'])) {
             $con->query($sql);
         }
     }
-    header("location: ../tickets.php");
+    $_SESSION['success_message'] = 'Feedback added successfully';
+    header("location: ../feedbacks.php");
 } else {
-    header("location: ../tickets.php");
+    header("location: ../feedbacks.php");
 }

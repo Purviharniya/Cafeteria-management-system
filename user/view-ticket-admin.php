@@ -53,7 +53,7 @@ echo '<ul id="task-card" class="collection with-header">
 										<p><strong>Type: </strong>' . $type . '</p>
 										</div>
 										<div class="card-action deep-purple darken-4">
-										<form method="post" action="routers/ticket-status.php">
+										<form method="post" action="handlers/ticket-status.php">
 										<input type="hidden" name="ticket_id" value="' . $ticket_id . '">
 										<input type="hidden" name="status" value="' . ($status != 'Closed' ? 'Closed' : 'Open') . '">
 										<button class="waves-effect waves-light deep-purple darken-1 btn white-text" type="submit" name="action">'

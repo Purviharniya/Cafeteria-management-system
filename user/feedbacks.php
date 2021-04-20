@@ -23,6 +23,16 @@ include "includes/customer_header.php";
     <div class="container">
         <p class="caption">If you're experiencing any issues, contact us by writing your feedback.</p>
         <div class="divider"></div>
+        <?php
+if (isset($_SESSION['success_message'])) {?>
+        <div class="alert alert-success">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <?php echo $_SESSION['success_message']; ?>
+        </div>
+        <?php
+unset($_SESSION['success_message']);
+}
+?>
         <div class="row">
             <div class="col s12 m4 l3">
                 <h4 class="header">Add a Feedback</h4>
@@ -63,8 +73,8 @@ include "includes/customer_header.php";
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <input type="hidden" value="<?php echo $user_id; ?>" name="id">
-                                        <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit"
-                                            name="action">Submit
+                                        <button class="btn waves-effect waves-light right deep-purple darken-4"
+                                            type="submit" name="action">Submit
                                             <i class="mdi-content-send right"></i>
                                         </button>
                                     </div>
