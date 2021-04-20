@@ -1,9 +1,21 @@
 <?php
 include '../../config.php';
+// $name = $username = $password = $phone = '';
+
 $name = htmlspecialchars($_POST['name']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
 $phone = $_POST['phone'];
+
+// echo $_POST['name'];
+// echo "<script>console.log('$name');</script>";
+
+if ($name == '' || $username == '' || $password == '' || $phone == '') {
+
+    $_SESSION['error_message'] = "All the fields are required!";
+    header("location: ../register.php");
+    exit();
+}
 
 function number($length)
 {
@@ -22,7 +34,7 @@ if (mysqli_num_rows($sql_check) > 0) {
     header("location: ../register.php");
     exit();
 }
-echo mysqli_num_rows($sql_check);
+// echo mysqli_num_rows($sql_check);
 
 $sql = "INSERT INTO users (name, username, password, contact) VALUES ('$name', '$username', '$password', $phone);";
 if ($con->query($sql) == true) {
