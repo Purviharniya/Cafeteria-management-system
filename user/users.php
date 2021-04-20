@@ -89,7 +89,7 @@ while ($row = mysqli_fetch_array($result)) {
                         </table>
                     </div>
                     <div class="input-field col s12">
-                        <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Modify
+                        <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" name="action">Modify
                             <i class="mdi-content-send right"></i>
                         </button>
                     </div>
@@ -142,7 +142,7 @@ echo '<td><select name="deleted">
                         </table>
                     </div>
                     <div class="input-field col s12">
-                        <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Add
+                        <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" name="action">Add
                             <i class="mdi-content-send right"></i>
                         </button>
                     </div>

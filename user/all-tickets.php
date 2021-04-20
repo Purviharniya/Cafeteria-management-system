@@ -34,10 +34,10 @@ while ($row = mysqli_fetch_array($sql)) {
     echo '<a href="view-ticket-admin.php?id=' . $row['id'] . '"class="collection-item">
                                         <div class="row">
                                             <div class="col s6">
-                                                <p class="collections-title">' . $row['subject'] . '</p>
+                                                <p class="collections-title" style="color:#311b92;">' . $row['subject'] . '</p>
                                             </div>
                                             <div class="col s2">
-                                            <span class="task-cat cyan">' . $row['status'] . '</span></div>
+                                            <span class="task-cat deep-purple darken-1">' . $row['status'] . '</span></div>
                                             <div class="col s2">
                                             <span class="task-cat grey darken-3">' . $row['type'] . '</span></div>
                                             <div class="col s2">

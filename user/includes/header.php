@@ -21,7 +21,7 @@ if (isset($_SESSION['admin_sid'])) {
     <title>CMS</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="../vendor/images/logo.jpg">
+    <link rel="shortcut icon" href="../vendor/images/logo1.png">
 
     <!-- CORE CSS-->
 

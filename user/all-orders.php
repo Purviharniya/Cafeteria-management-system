@@ -41,7 +41,7 @@ while ($row = mysqli_fetch_array($sql)) {
     $status = $row['status'];
     $deleted = $row['deleted'];
     echo '<li class="collection-item avatar">
-                              <i class="mdi-content-content-paste red circle"></i>
+                              <i class="mdi-content-content-paste deep-purple darken-4 circle"></i>
                               <span class="collection-header">Order No. ' . $row['id'] . '</span>
                               <p><strong>Date:</strong> ' . $row['date'] . '</p>
                               <p><strong>Payment Type:</strong> ' . $row['payment_type'] . '</p>
@@ -104,7 +104,7 @@ while ($row = mysqli_fetch_array($sql)) {
                                                 <span><strong>Rs. ' . $row['total'] . '</strong></span>
                                             </div>';
     if (!$deleted) {
-        echo '<button class="btn waves-effect waves-light right submit" type="submit" name="action">Change Status
+        echo '<button class="btn waves-effect waves-light right submit deep-purple darken-1" type="submit" name="action">Change Status
                                               <i class="mdi-content-send right"></i>
 										</button>
 										</form>';

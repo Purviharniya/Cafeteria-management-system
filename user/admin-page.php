@@ -59,7 +59,7 @@ while ($row = mysqli_fetch_array($result)) {
     echo '
 					<img class="admin-menu-img" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" id="' . $row["id"] . '_image" name="' . $row['id'] . '_image" type="file" data-error=".errorTxt' . $row["id"] . '"><div class="errorTxt' . $row["id"] . '"></div>
                     </td>
-                    <td> <button class="btn cyan waves-effect waves-light right" type="submit" value="' . $row["id"] . '" name="delete_item">Delete
+                    <td> <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" value="' . $row["id"] . '" name="delete_item">Delete
                     <i class="mdi-content-send right"></i>
                 </button></td>
                     </tr>';
@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_array($result)) {
                     </table>
                 </div>
                 <div class="input-field col s12">
-                    <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Modify
+                    <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" name="action">Modify
                         <i class="mdi-content-send right"></i>
                     </button>
                 </div>
@@ -108,7 +108,7 @@ echo '<td></tr>';
                     </table>
                 </div>
                 <div class="input-field col s12">
-                    <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Add
+                    <button class="btn waves-effect waves-light right deep-purple darken-4" type="submit" name="action">Add
                         <i class="mdi-content-send right"></i>
                     </button>
                 </div>
