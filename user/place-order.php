@@ -133,13 +133,14 @@ echo '<li class="collection-item avatar">
         <p><strong>Name:</strong>' . $name . '</p>
 		<p><strong>Contact Number:</strong> ' . $contact . '</p>
         <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>';
-
+// print_r($_POST);
 foreach ($_POST as $key => $value) {
     if ($value == '') {
-        break;
+        continue;
     }
     if (is_numeric($key)) {
         // echo "hi";
+        echo $key;
         $result = mysqli_query($con, "SELECT * FROM items WHERE id = $key");
         while ($row = mysqli_fetch_array($result)) {
             $price = $row['price'];
