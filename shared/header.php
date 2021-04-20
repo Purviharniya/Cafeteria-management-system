@@ -24,7 +24,7 @@ include("config.php");
     <link rel="stylesheet" type="text/css" href="vendor/css/zerogrid.css">
     <link rel="stylesheet" type="text/css" href="vendor/css/style.css">
     <link rel="stylesheet" type="text/css" href="vendor/css/loader.css">
-    <link rel="shortcut icon" href="vendor/images/logo.jpg">
+    <link rel="shortcut icon" href="vendor/images/logo1.png">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
