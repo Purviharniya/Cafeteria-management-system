@@ -34,6 +34,16 @@ if ($_SESSION['customer_sid'] == session_id()) {
         <div class="container">
             <p class="caption">Edit your details here which are required for delivery and contact.</p>
             <div class="divider"></div>
+            <?php
+if (isset($_SESSION['success_message'])) {?>
+            <div class="alert alert-success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <?php echo $_SESSION['success_message']; ?>
+            </div>
+            <?php
+unset($_SESSION['success_message']);
+    }
+    ?>
             <div class="row">
                 <div class="col s12 m4 l3">
                     <h4 class="header">Details</h4>
@@ -42,7 +52,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
                     <div class="card-panel">
                         <div class="row">
                             <form class="formValidate" id="formValidate" method="post"
-                                action="routers/details-router.php" novalidate="novalidate" class="col s12">
+                                action="handlers/details-router.php" novalidate="novalidate" class="col s12">
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="mdi-social-person prefix"></i>
