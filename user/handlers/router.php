@@ -36,6 +36,8 @@ if ($success == true) {
         $_SESSION['name'] = $name;
         header("location: ../index.php");
     } else {
+        $_SESSION['error_message'] = "User does not exist! Please sign up!";
         header("location: ../login.php");
+        exit();
     }
 }

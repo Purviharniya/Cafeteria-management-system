@@ -3,8 +3,19 @@ include "includes/header.php";
 ?>
 
 <div class="register-wrapper">
+
     <div class="form-div card z-depth-5">
         <div class="card-header">
+            <?php
+if (isset($_SESSION['error_message'])) {?>
+            <div class="alert alert-danger">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <?php echo $_SESSION['error_message']; ?>
+            </div>
+            <?php
+unset($_SESSION['error_message']);
+}
+?>
             <div class="card-title reg-head center-align">
                 Register
             </div>

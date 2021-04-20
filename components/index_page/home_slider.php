@@ -34,7 +34,7 @@
                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
                     data-start="1200" style="z-index: 12;">
-                    <a href="./account/register.php" class="btn-common btn-white page-scroll">Order Now</a>
+                    <a href="./user/register.php" class="btn-common btn-white page-scroll">Order Now</a>
                 </div>
 
 
@@ -101,7 +101,7 @@
                     data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
                     data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
                     data-start="1200" style="z-index: 12;">
-                    <a href="./account/register.php" class="btn-common btn-white page-scroll">Order Now</a>
+                    <a href="./user/register.php" class="btn-common btn-white page-scroll">Order Now</a>
                 </div>
             </li>
             <!-- SLIDE  -->

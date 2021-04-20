@@ -16,6 +16,14 @@ function number($length)
     return $result;
 }
 
+$sql_check = mysqli_query($con, "SELECT * from users where username='$username' or contact='$phone'");
+if (mysqli_num_rows($sql_check) > 0) {
+    $_SESSION['error_message'] = "User with this username or phone number already exists!";
+    header("location: ../register.php");
+    exit();
+}
+echo mysqli_num_rows($sql_check);
+
 $sql = "INSERT INTO users (name, username, password, contact) VALUES ('$name', '$username', '$password', $phone);";
 if ($con->query($sql) == true) {
     $user_id = $con->insert_id;
@@ -28,4 +36,4 @@ if ($con->query($sql) == true) {
         $con->query($sql);
     }
 }
-header("location: ../login.php");
+// header("location: ../login.php");
