@@ -48,4 +48,4 @@ if ($con->query($sql) == true) {
         $con->query($sql);
     }
 }
-// header("location: ../login.php");
+header("location: ../login.php");
